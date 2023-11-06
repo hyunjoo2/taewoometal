@@ -1,0 +1,304 @@
+@import './helper/index';
+
+
+.container-intro{
+  flex: 1;
+  .container__inner{
+    height:100%;
+    padding-top: 0;
+  }
+}
+.footer-intro{
+  margin-top: 0;
+}
+
+.logo{
+  &-intro{
+    &__link{
+      display: block;
+      width: 42.6rem;
+      height: 6.9rem;
+      margin: 0 auto;
+      margin-bottom: 4.5rem;
+      background: url(../images/common/logo-white.png);
+      background-size: 42.6rem 6.9rem;
+    }
+  }
+}
+
+.intro{
+  height:100%;
+  background: url(../images/background/bg-intro.jpg) no-repeat center;
+  background-size: cover;
+  &__inner{
+    max-width: 129rem;
+    height:100vh;
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 12.7rem;
+    box-sizing: border-box;
+  }
+  &-text{
+    width: 30.7rem;
+    height: 3rem;
+    margin-left: auto;
+    background: url(../images/etc/intro-text.png);
+    background-size: 30.7rem 3rem;
+  }
+  &-content{
+    margin-top: 3.5rem;
+    &__shortcut{
+      margin-top: 3rem;
+    }
+  }
+  &-box{
+    &__list{
+      &s{
+        @include d-flex;
+        flex-wrap: wrap;
+        margin: -1.5rem;
+      }
+      width: calc((100% / 4) - 3rem);
+      margin:1.5rem;
+      height: 20.5rem;
+      box-sizing: border-box;
+      border-radius: 1.5rem;
+      box-shadow: 1.6rem 1.6rem 3.6rem rgba($color: #000000, $alpha: .35);
+      &--common{
+        .intro-box{
+          &__category{
+            background: #005b79;
+          }
+          &__link{
+            &:hover{
+              .intro-box{
+                &__text{
+                  background: #005b79; 
+                }
+              }
+            }
+          }
+        }
+      }
+      &--sunmoon{
+        .intro-box{
+          &__category{
+            background: #006a79;
+          }
+          &__link{
+            &:hover{
+              .intro-box{
+                &__text{
+                  background: #006a79; 
+                }
+              }
+            }
+          }
+        }
+      }
+      &--noting{
+        background: #8c969c url(../images/background/bg-noCategory.png) no-repeat center;
+        background-size: 13.8rem;
+      }
+    }
+    &__link{
+      @include d-flex;
+      flex-direction: column;
+      height:100%;
+      color:#000000;
+      &:hover{
+        .intro-box{
+          &__category{
+            position: relative;
+            &::before{
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 1px;
+              background: rgba($color: #ffffff, $alpha: .15);
+              animation:introCategoryBorder .3s  linear forwards;    
+              content:""
+            }
+            //border-bottom: 1px solid rgba($color: #ffffff, $alpha: .15)
+          }
+          &__text{
+            &--top, &--title{
+              color:#ffffff;
+            }
+          }
+        }
+        
+      }
+    }
+    
+    &__category{
+      @include d-flex;
+      align-items: center;
+      height: 5.4rem;
+      padding:0 3.5rem;
+      flex:none;
+      font-size: 2rem;
+      color:#ffffff;
+      background: #005b79;
+      //border-bottom:1px solid;
+      border-radius: 1.5rem 1.5rem 0 0;
+      box-sizing: border-box;
+      &--icon{
+        display: inline-block;
+        width: .6rem;
+        height: 1.1rem;
+        margin-left: auto;
+        background: url(../images/icon/icon-clampRight__white.png);
+        background-size: .6rem 1.1rem;
+      }
+    }
+    &__text{
+      @include d-flex;
+      flex-direction: column;
+      height: 100%;
+      padding:3rem 3.5rem;
+      background: #ffffff;
+      border-radius: 0 0 1.5rem 1.5rem;
+      transition: all .2s;
+      &--top{
+        margin-bottom: .7rem;
+        font: {
+          size: 1.8rem;
+          weight:500;
+        };
+        line-height: 100%;
+      }
+      &--title{
+        font: {
+          size: 2.8rem;
+          weight:600;
+        };
+        line-height: 3.6rem;
+        word-break: keep-all
+      }
+    }
+  }
+  &-shortcut{
+    &__list{
+      &s{
+        @include d-flex;
+        margin: -1.5rem;
+      }
+      flex:1;
+      margin: 1.5rem;
+    }
+    &__link{
+      @include d-flex;
+      @include align-center;
+      width:100%;
+      height: 6.2rem;
+      padding-left: 3rem;
+      padding-right:4rem;
+      background: #007978;
+      border-radius: 1.5rem;
+      box-sizing: border-box;
+      &:hover{
+        .intro-shortcut__icon--arrow{
+          animation:introArrowRight .6s infinite linear alternate;    
+        }
+      }
+    }
+    &__text{
+      @include d-flex;
+      @include align-center;
+      font: {
+        size: 2.2rem;
+        weight:500;
+      };
+      color:#ffffff;
+      //line-height: 100%;
+    }
+    &__subtext{
+      margin-left: 5px;
+      font: {
+        size:2rem;
+        weight:300;
+      };
+      line-height: 100%;
+    }
+    &__content{
+      @include d-flex;
+      @include align-center;
+      width:100%;
+    }
+    &__icon{
+      &--adm{
+        display: inline-block;
+        flex:none;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 1.5rem;
+        background: url(../images/icon/icon-shortcut__adm.png);
+        background-size: 3.2rem;
+      }
+      &--college{
+        display: inline-block;
+        flex:none;
+        width: 3.3rem;
+        height: 3.1rem;
+        margin-right: 1.5rem;
+        background: url(../images/icon/icon-shortcut__college.png);
+        background-size: 3.3rem 3.1rem;
+      }
+      &--arrow{
+        display: inline-block;
+        width: .6rem;
+        height: 1.1rem;
+        margin-left: auto;
+        background: url(../images/icon/icon-clampRight__white.png);
+        background-size: .6rem 1.1rem;
+      }
+    }
+  }
+}
+
+
+
+/*====================================================================================*/ 
+/*================================= responsive =======================================*/ 
+/*====================================================================================*/ 
+
+
+@media (max-width:1400px) {
+  .intro__inner{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width:1024px){
+  .intro{
+    &__inner{
+      height: auto;
+    }
+    &-box{
+      &__list{
+        width: calc((100% / 2) - 3rem);
+      }
+    }
+  }
+}
+@media (max-width:720px){
+  
+  .intro{
+    &-text{
+      margin: 0 auto;
+    }
+    &-shortcut{
+      &__list{
+        &s{
+          flex-direction: column;
+        }
+      }
+      &__text{
+        
+        margin-top: 3px;
+      }
+    }
+  }
+}

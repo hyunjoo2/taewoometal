@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>선문대학교 입학처</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+
+  <!-- 공통 css -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+  <!-- //공통 css -->
+
+  <!-- 서브 메뉴별 css -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/sub.css" /><!-- 서브 공통 -->
+  
+
+
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/swiper.min.js"></script>
+  <script src="../dist/assets/js/common.js"></script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header-top">
+          <div class="header-top__inner">
+            <div class="header-top__left">
+              <ul class="ui-list header-top__lists">
+                <li class="header-top__list header-top__list--home"><a href="./main.html"
+                    class="header-top__link header-top__link--home">입학 홈페이지</a></li>
+                <li class="header-top__list header-top__list--sunmoon"><a href="https://lily.sunmoon.ac.kr/MainDefault3.aspx" target="_blank"
+                    class="header-top__link header-top__link--sunmoon">선문대학교</a></li>
+              </ul>
+            </div>
+            <!-- <div class="header-top__right">
+              <ul class="ui-list header-top__lists">
+                <li class="header-top__list header-top__list--login"><a href="javascript:void(0)" class="header-top__link">로그인</a></li>
+                <li class="header-top__list header-top__list--join"><a href="javascript:void(0)" class="header-top__link">회원가입</a></li>
+                <li class="header-top__list header-top__list--sitemap"><a href="javascript:void(0)" class="header-top__link">SITEMAP</a></li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="header-bottom__inner">
+            <div class="header-logo">
+              <a href="javascript:void(0)" class="header-logo__link"></a>
+            </div>
+            <nav class="gnb">
+              <div class="gnb__inner">
+                <div class="gnb-menu">
+                  <div class="gnb-menu__inner">
+                    <ul class="ui-list gnb-menu__lists">
+                      <li class="gnb-menu__list">
+                        <a href="javascript:void(0)" class="gnb-menu__link">수시</a>
+                        <div class="depth-2">
+                          <div class="depth-2__inner">
+                            <div class="depth-2__des">
+                              <p class="depth-2__des--tit">수시</p>
+                              <p class="depth-2__des--text">세계의 중심에서 <br>미래를 꿈꾸는 대학</p>
+                            </div>
+                            <ul class="ui-list depth-2__lists">
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">모집요강</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입시결과</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">학생부종합전형안내</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="gnb-menu__list">
+                        <a href="javascript:void(0)" class="gnb-menu__link">정시</a>
+                        <div class="depth-2">
+                          <div class="depth-2__inner">
+                            <div class="depth-2__des">
+                              <p class="depth-2__des--tit">정시</p>
+                              <p class="depth-2__des--text">세계의 중심에서 <br>미래를 꿈꾸는 대학</p>
+                            </div>
+                            <ul class="ui-list depth-2__lists">
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">모집요강</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입시결과</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입시자료실</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="gnb-menu__list">
+                        <a href="javascript:void(0)" class="gnb-menu__link">재외국민/외국인</a>
+                        <div class="depth-2">
+                          <div class="depth-2__inner">
+                            <div class="depth-2__des">
+                              <p class="depth-2__des--tit">재외국민/외국인</p>
+                              <p class="depth-2__des--text">세계의 중심에서 <br>미래를 꿈꾸는 대학</p>
+                            </div>
+                            <ul class="ui-list depth-2__lists">
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">모집요강</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <!-- 전달사항 :: 외부링크일때 클래스 .depth-2__link--out | target="_blank" 추가 됩니다. -->
+                                <a href="https://kli.sunmoon.ac.kr/intro.html" target="_blank"
+                                  class="depth-2__link depth-2__link--out">한국어교육원</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="https://global.sunmoon.ac.kr/bbs/content.php?co_id=student_01" target="_blank"
+                                  class="depth-2__link depth-2__link--out">글로벌입학팀(외국인입학)</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="gnb-menu__list">
+                        <a href="javascript:void(0)" class="gnb-menu__link">편입학</a>
+                        <div class="depth-2">
+                          <div class="depth-2__inner">
+                            <div class="depth-2__des">
+                              <p class="depth-2__des--tit">편입학</p>
+                              <p class="depth-2__des--text">세계의 중심에서 <br>미래를 꿈꾸는 대학</p>
+                            </div>
+                            <ul class="ui-list depth-2__lists">
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">모집요강</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입시결과</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">편입학 장학 특전</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="gnb-menu__list">
+                        <a href="javascript:void(0)" class="gnb-menu__link">디지털입학처</a>
+                        <div class="depth-2">
+                          <div class="depth-2__inner">
+                            <div class="depth-2__des">
+                              <p class="depth-2__des--tit">디지털입학처</p>
+                              <p class="depth-2__des--text">세계의 중심에서 <br>미래를 꿈꾸는 대학</p>
+                            </div>
+                            <ul class="ui-list depth-2__lists">
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">내성적산출하기</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">진로전공탐색관</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">비대면상담신청</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">전문가와 상담하기</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="gnb-menu__list">
+                        <a href="javascript:void(0)" class="gnb-menu__link">입시도우미</a>
+                        <div class="depth-2">
+                          <div class="depth-2__inner">
+                            <div class="depth-2__des">
+                              <p class="depth-2__des--tit">입시도우미</p>
+                              <p class="depth-2__des--text">세계의 중심에서 <br>미래를 꿈꾸는 대학</p>
+                            </div>
+                            <ul class="ui-list depth-2__lists">
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입학전형계획</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">공지사항</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입시자료실</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입시상담 Q&amp;A</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">입시자료신청</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">전문가와 상담하기</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="javascript:void(0)" class="depth-2__link">대입전형안내동영상</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="gnb-menu__list">
+                        <a href="javascript:void(0)" class="gnb-menu__link">학교정보</a>
+                        <div class="depth-2">
+                          <div class="depth-2__inner">
+                            <div class="depth-2__des">
+                              <p class="depth-2__des--tit">학교정보</p>
+                              <p class="depth-2__des--text">세계의 중심에서 <br>미래를 꿈꾸는 대학</p>
+                            </div>
+                            <ul class="ui-list depth-2__lists">
+                              <li class="depth-2__list">
+                                <a href="https://lily.sunmoon.ac.kr/Page2/Graduate/Graduate00_2.aspx" target="_blank" class="depth-2__link">학부(과)안내</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="https://info.sunmoon.ac.kr/PageN/content/education_01.aspx" target="_blank" class="depth-2__link">학사제도</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="http://info.sunmoon.ac.kr/PageN/content/grade_03.aspx" target="_blank" class="depth-2__link">장학안내</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="http://global.sunmoon.ac.kr/bbs/content.php?co_id=dispatch_01" target="_blank" class="depth-2__link">유학프로그램</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="http://success.sunmoon.ac.kr" target="_blank" class="depth-2__link">학생성공센터</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="http://dorm.sunmoon.ac.kr/?m=0704&s=admission" target="_blank" class="depth-2__link">기숙사안내</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="https://lily.sunmoon.ac.kr/Page2/About/SchoolBus.aspx" target="_blank" class="depth-2__link">통학버스안내</a>
+                              </li>
+                              <li class="depth-2__list">
+                                <a href="https://lily.sunmoon.ac.kr/Page2/About/Location.aspx" target="_blank" class="depth-2__link">찾아오시는길</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <div class="gnb-sitemap">
+              <div class="gnb-sitemap__inner">
+                <button type="button" class="gnb-sitemap__button"><span class="gnb-sitemap__span"></span><span class="gnb-sitemap__span"></span><span
+                  class="gnb-sitemap__span"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container container-sub">
+      <div class="container__inner">
+        <section class="sub-visual sub-visual__early">
+          <div class="sub-visual__inner">
+            <div class="sub-visual__text">입시도우미</div>
+          </div>
+        </section>
+        <section class="sub-content">
+          <div class="sub-content__inner">
+            <article class="left-menu">
+              <div class="left-menu__inner">
+                <div class="left-menu__title">입시도우미</div>
+                <ul class="ui-list left-menu__lists">
+                  <li class="left-menu__list"><a href="javascript:void(0)" class="left-menu__link">입학전형계획</a></li>
+                  <li class="left-menu__list"><a href="javascript:void(0)" class="left-menu__link">공지사항</a></li>
+                  <li class="left-menu__list"><a href="javascript:void(0)" class="left-menu__link">입시자료실</a></li>
+                  <li class="left-menu__list"><a href="javascript:void(0)" class="left-menu__link">입시상담 Q&amp;A</a></li>
+                  <li class="left-menu__list"><a href="javascript:void(0)" class="left-menu__link">입시자료신청</a></li>
+                  <li class="left-menu__list"><a href="javascript:void(0)" class="left-menu__link">전문가와 상담하기</a></li>
+                  <li class="left-menu__list"><a href="javascript:void(0)" class="left-menu__link">대입전형안내동영상</a></li>
+                </ul>
+              </div>
+            </article>
+            <article class="sub-core">
+
+              <div class="sub-core__title--wrap">
+                <div class="sub-core__title">입시자료신청</div>
+                <div class="sub-breadcrumb">
+                  <ul class="ui-list breadcrumb-lists">
+                    <li class="breadcrumb-list breadcrumb-list__home">
+                      <a href="javascript:void(0)" class="breadcrumb-link"><span class="for-a11y">HOME</span></a>
+                    </li>
+                    <li class="breadcrumb-list breadcrumb-list__depth1">
+                      <a href="javascript:void(0)" class="breadcrumb-link">입시도우미</a>
+                    </li>
+                    <!-- 전달사항 :: 현재 활성화 페이지에 클래스 is-active 붙습니다. -->
+                    <li class="breadcrumb-list breadcrumb-list__depth2 is-active">
+                      <a href="javascript:void(0)" class="breadcrumb-link">입시자료신청</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sub-core__contents">
+                <div class="sub-core__item">
+                  <div class="sub-core__item--title">입시자료신청</div>
+                  <div class="core-item__box core-item__box-green">
+                    모집 유형에 따라 모집요강 업로드 시기가 다릅니다. 아래 모집요강 업로드 시기를 참고하여 신청해 주시기 바랍니다. <br>
+                    모집요강이 아직 제작되지 않은 상태일 경우 전년도 모집요강과 당해년도 입학전형계획 책자를 보내드립니다. <br>
+                    모집요강 및 입학전형계획은 입학처 홈페이지에서도 확인 가능합니다.
+                  </div>
+                </div>
+
+                <div class="sub-core__item">
+                  <div class="sub-core__item--title">모집요강 발행 시기 및 홈페이지 탑재 위치</div>
+                  <div class="ui-table-wrap">
+                    <div class="ui-table__inner">
+                      <table class="ui-table ui-table__hor">
+                        <colgroup>
+                          <col style="width: 28%;">
+                          <col style="width: 23.4%;">
+                          <col style="width: auto;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>발행시기</th>
+                            <th>홈페이지 탑재 위치</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>입학전형계획</td>
+                            <td>3월 초</td>
+                            <td>입시도우미 탭 - 입학전형계획 - 입학전형계획 다운로드</td>
+                          </tr>
+                          <tr>
+                            <td>수시 모집요강</td>
+                            <td>5월 말</td>
+                            <td>수시 탭 - 모집요강 - 모집요강 다운로드</td>
+                          </tr>
+                          <tr>
+                            <td>정시 모집요강</td>
+                            <td>11월 중순</td>
+                            <td>정시 탭 - 모집요강 - 모집요강 다운로드</td>
+                          </tr>
+                          <tr>
+                            <td>편입학 모집요강</td>
+                            <td>11월 말</td>
+                            <td>편입학 탭 - 모집요강 - 모집요강 다운로드</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <p class="ui-des ui-des__under-table">* 업로드 시기는 변경될 수 있습니다.</p>
+                </div>
+
+
+                <div class="sub-core__item">
+                  <!-- <div class="sub-core__item--title">입시자료신청</div> -->
+
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="-1" disabled="" selected="">년도 선택</option>
+                      <option value="">option 1</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+
+
+                  <div class="ui-table-wrap mt-20">
+                    <div class="ui-table__inner">
+                      <table class="ui-table ui-table__ver">
+                        <colgroup>
+                          <col class="ver-th">
+                          <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>입시자료<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                            <td>
+                              <div class="ui-checkbox__list">
+                                <div class="ui-checkbox__inner">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" id="subChk01">
+                                    <label for="subChk01" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">입학전형계획</span>
+                                    </label>
+                                  </div>
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" id="subChk02" checked="">
+                                    <label for="subChk02" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">수시모집요강</span>
+                                    </label>
+                                  </div>
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox">
+                                    <label for="subChk" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">정시모집요강</span>
+                                    </label>
+                                  </div>
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox">
+                                    <label for="subChk" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">편입학모집요강</span>
+                                    </label>
+                                  </div>
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox">
+                                    <label for="subChk" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">기타(브로슈어)</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>성명<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                            <td>
+                              <input type="text" class="ui-input ui-input__width--459">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>이메일</th>
+                            <td><input type="text" class="ui-input ui-input__width--459"></td>
+                          </tr>
+                          <tr>
+                            <th>자택전화<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                            <td>
+                              <input type="text" class="ui-input ui-input__width--459">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>휴대전화<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                            <td><input type="text" class="ui-input ui-input__width--459"></td>
+                          </tr>
+                          <tr>
+                            <th>주소<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                            <td>
+                              <div class="form-flex form-flex__column">
+                                <div class="form-flex__cell">
+                                  <div class="form-email">
+                                    <input type="text" class="ui-input">
+                                    <span class="ui-hyphen">-</span>  
+                                    <input type="text" class="ui-input">
+                                    <button class="ui-button ui-button__bg--deepgray ui-button__email">우편번호 검색</button>
+                                  </div>
+                                </div>
+                                <div class="form-flex__cell">
+                                  <input type="text" class="ui-input ui-input__width--459">
+                                </div>
+                                <div class="form-flex__cell">
+                                  <input type="text" class="ui-input ui-input__width--459">
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>출신학교<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                            <td>
+                              <div class="form-des">
+                                <input type="text" class="ui-input ui-input__width--459">
+                                <div class="ui-des">* 졸업예정 또는 졸업한 고등학교</div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="sub-core__item">
+                  <div class="ui-buttons ui-buttons__center">
+                    <button type="button" class="ui-button ui-button__bg--default">자료요청</button>
+                    <button type="button" class="ui-button ui-button__bg--deepgray">취소</button>
+                  </div>
+                </div>
+              </div>
+
+
+            </article>
+          </div>
+        </section>
+        
+      <!-- 2023.06.30 : add : top 버튼 추가 -->
+        <div class="top-button__wrap">
+          <button class="button-top">TOP</button>
+        </div>
+        <!--// 2023.06.30 : add : top 버튼 추가 -->
+
+
+      </div>
+    </main>
+    <footer class="footer footer-sub">
+      <div class="footer__inner">
+        <div class="footer-top">
+          <div class="footer-top__inner">
+            <div class="footer-top__left">
+              <ul class="ui-list footer-link__lists">
+                <li class="footer-link__list"><a href="javascript:void(0)" class="footer-link__link">선문대학교</a></li>
+                <li class="footer-link__list"><a href="https://lily.sunmoon.ac.kr/Page2/Etc/Personalinfo.aspx" target="_blank" class="footer-link__link">개인정보처리방침</a></li>
+                <li class="footer-link__list"><a href="javascript:void(0)" class="footer-link__link">이메일무단수집거부</a></li>
+                <li class="footer-link__list"><a href="javascript:void(0)" class="footer-link__link">VR캠퍼스투어</a></li>
+                <li class="footer-link__list footer-link__list--route"><a href="javascript:void(0)"
+                    class="footer-link__link">찾아오시는길</a></li>
+              </ul>
+            </div>
+            <div class="footer-top__right">
+              <ul class="ui-list footer-sns__lists">
+                <li class="footer-sns__list footer-sns__list--adiga"><a
+                    href="https://www.adiga.kr/EgovPageLink.do?link=EipMain" target="_blank"
+                    class="footer-sns__link"><span class="for-a11y">대입정보종합포탈어디가</span></a></li>
+                <li class="footer-sns__list footer-sns__list--facebook"><a
+                    href="https://www.facebook.com/sunmoonuniversity" target="_blank" class="footer-sns__link"><span
+                      class="for-a11y">facebook</span></a></li>
+                <li class="footer-sns__list footer-sns__list--instagram"><a
+                    href="https://www.instagram.com/sunmoonuniv/" target="_blank" class="footer-sns__link"><span
+                      class="for-a11y">instagram</span></a></li>
+                <li class="footer-sns__list footer-sns__list--youtube"><a
+                    href="https://www.youtube.com/channel/UCwK3hT2ah8OA9Hzjmiq4TmQ" target="_blank"
+                    class="footer-sns__link"><span class="for-a11y">youtube</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom__inner">
+            <div class="footer-logo">
+              <a href="./main.html" class="footer-logo__link"><span class="for-a11y">선문대학교</span></a>
+            </div>
+            <div class="footer-info">
+              <p class="footer-address__kor">(31460) 충남 아산시 탕정면 선문로 221번길 70 선문대학교 <span
+                  class="footer-address__telfax"><span class="footer-address__tel">TEL : 041-530-2033-4</span><span
+                    class="footer-address__fax">FAX : 041-530-2976</span></span></p>
+              <p class="footer-address__eng">70, Sunmoon-ro 221 beon-gil, Tangjeong-myeon, Asan-si, Chungcheongnam-do,
+                Korea, 31460</p>
+              <p class="footer-info__copyright">Copyright (c) 2023 Sunmoon University. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
