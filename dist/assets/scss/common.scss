@@ -2,11 +2,13 @@
 
 /* header */ 
 .header{
+	@include d-flex;
+	@include justify-center;
 	position: absolute;
 	top: 0;	
 	left: 0;
 	width:100%;
-	height: 12.4rem;
+	height: 10rem;
 	background: #ffffff;
 	z-index: 2;
 	overflow: hidden;
@@ -15,90 +17,20 @@
 		height: 44.1rem;
 		box-shadow: 1rem 2rem 2rem rgba($color: #000000, $alpha: 0.3);
 	}
-	&-top{
-		background: #006a79;
-		&__inner{
-			@include d-flex;
-			@include align-center;
-			max-width:140rem;
-			width:100%;
-			height:4rem;
-			margin: 0 auto;
-		}
-		&__left, &__right{
-			height: 100%;
-		}
-		&__list{
-			@include d-flex;
-			@include align-center;
-			height:100%;
-			&s{
-				@include d-flex;
-				@include align-center;
-				height:100%;
-			}
-		}
-		&__link{
-			@include d-flex-center;
-			height:100%;
-			font-size:1.4rem;
-			color:#ffffff;
-			&--home{
-				background: #005461;
-			}
-			&--home, &--sunmoon{
-				padding: 0 3rem;
-			}
-		}
-		
-		&__right{
-			margin-left: auto;
-			.header-top{
-				&__link{
-					position: relative;
-					padding:0 2rem;
-				}
-				&__list{
-					&s{
-						margin: 0 -2rem;
-					}
-					&+.header-top__list{
-						position: relative;
-						&::before{
-							display: inline-block;
-							position: absolute;
-							left: -1px;
-							width:3px;
-							height:3px;
-							background: #ffffff;
-							opacity: .5;
-							border-radius: 100%;
-							content:""
-						}
-					}
-				}
-			}
-		}
-	}
-	&-bottom{
-		&__inner{
-			@include d-flex;
-			align-items: center;
-			max-width: 140rem;
-			width:100%;
-			height: calc(12.4rem - 4rem);
-			margin: 0 auto;
-		}
+	&__inner{
+		@include d-flex;
+		width:140rem;
+		height: 100%;
 	}
 	&-logo{
 		height: 100%;
 		&__link{
 			display: inline-block;
-			width: 28.6rem;
+			width: 19.5rem;
 			//height: 4.4rem;
 			height: 100%;
 			background: url(../images/common/logo.png) no-repeat center;
-			background-size: 28.6rem 4.4rem;
+			background-size: 19.5rem 4.5rem;
 		}
 	}
 }
@@ -109,18 +41,18 @@
 		@include align-center;
 		max-width: 140rem;
 		margin: 0 auto;
-		justify-content: space-between;
-		height:8.4rem;
+		
+		height:100%;
 	}
 	&-menu{
 		flex:1;
-		@include d-flex-center;
+		@include d-flex;
+		justify-content: flex-end;
 		height: 100%;
 		&__inner{
-			@include d-flex-center;
-			max-width: 140rem;
+			@include d-flex;
+			
 			height: 100%;
-			margin: 0 auto;
 		}
 		&__list{
 			&s{
@@ -135,12 +67,15 @@
 					color:#044d58;
 				}
 			}
+			&+&{
+				margin-left: 14rem;
+			}
 			
 		}
 		&__link{
 			@include d-flex-center;
 			height: 100%;
-			padding: 0 3.3rem;
+			//padding: 0 3.3rem;
 			font: {
 				size: 2rem;
 				weight:600;
@@ -152,186 +87,7 @@
 		}
 	}
 }
-.sitemap{
-	&-button{
-		@include d-flex;
-		position: relative;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: flex-end;
-		width: 3rem;
-		height: 2.5rem;
-		background: #ffffff;
-		border:0;
-		&.is-active{
-			.gnb-sitemap__span{
-				&:nth-child(1){
-					transform: translateY(1.1rem) rotate(-45deg);
-				}
-				&:nth-child(2){
-					opacity: 0;
-				}
-				&:nth-child(3){
-					transform: translateY(-1.1rem) rotate(45deg);
-				}	
-			}
-		}
-	}
-	&-span{
-		display: inline-block;
-		position: absolute;
-		width:100%;
-		height:3px;
-		background: #000000;
-		transition: all .2s;
-		&:nth-child(1){
-			top: 0;
-		}
-		&:nth-child(2){
-			top: 1.1rem;
-			width: 2rem;
-		}
-		&:nth-child(3){
-			top: 2.2rem;
-		}			
-	}
-	&-top{
-		&__list{
-			display: none;
-		}
-	}
-	&-header{
-		height: 8.5rem;
-		border-bottom: 1px solid #ededed;
-		&__inner{
-			@include d-flex;
-			@include align-center;
-			max-width: 140rem;
-			margin: 0 auto;
-			width: 100%;
-			height:100%;
-		}
-	}
-	&-logo{
-    display: inline-block;
-    width: 28.6rem;
-    height: 4.4rem;
-    background: url(../images/common/logo.png);
-    background-size: 28.6rem 4.4rem;
-	}
-	&-close{
-		margin-left: auto;
-		&__button{
-			width: 2.5rem;
-			height: 2.5rem;
-			background: url(../images/icon/icon-sitemap__close.png);
-			background-size: 2.5rem;
-		}
-	}
-	&-body{
-		&__inner{
-			max-width: 140rem;
-			width: 100%;
-			margin: 0 auto;
-		}
-	}
-	&-content{
-		display: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: auto;
-		background: #ffffff;
-		&.is-open{
-			display: block;
-			z-index: 999;
-		}
-		&__inner{
-			height: calc(100vh);
-			overflow: auto;
-		}
-	}
-	&-list{
-		&s{
-			padding-bottom: 10rem;
-			&__title{
-				width: 23.4rem;
-				flex:none;
-				font: {
-					size: 2.8rem;
-					weight:500;
-				};
-				line-height: 100%;
-				color:#016171;
-				font-family: 'SUNMOONUNIVERSITY', 'notokr', sans-serif
-			}
-		}
-		@include d-flex;
-		padding: 5rem 0;
-		&+&{
-			border-top: 1px solid #ededed;
-		}
-		&__item{
-			@include d-flex;
-			flex-wrap: wrap;
-			width:100%;
-			margin: -2rem -.85rem;
-		}
-	}
-	&-depth{
-		&2{
-			&__list{
-				&s{
-					width: calc(100% / 4);
-					padding: 2rem .85rem;
-					box-sizing: border-box;
-				}
-			}
-			&__title{
-				font: {
-					size: 1.7rem;
-					weight:600;
-				};
-				line-height: 100%;
-				text-align: center;
-				&--link{
-					@include d-flex-center;
-					height: 5.5rem;
-					color:#000000;
-					background: #e0f6f9;
-					border-radius: 1rem;
-				}
-			}
-		}
-		&3{
-			&__list{
-				&s{
-					padding: 1.5rem 2rem;
-				}
-				position: relative;
-				padding-left:1.5rem;
-				line-height: 2.8rem;
-				&::before{
-					position: absolute;
-					top: 1rem;
-					left: 0;
-					width:.6rem;
-					height:.6rem;
-					background:#cccccc;
-					border-radius: 100%;
-					content:""
-				}
-			}
-			&__link{
-				color: #000000;
-				text-decoration: none;
-				font-size: 1.6rem;
-				line-height: 100%;
-			}
-		}
-	}
-}
+
 .depth-2{
 	//display: none;
 	position: absolute;
@@ -595,7 +351,7 @@
 /* container  */ 
 .container {
 	&__inner{
-		padding-top: 12.4rem;
+		padding-top: 10rem;
 	}
 }
 
