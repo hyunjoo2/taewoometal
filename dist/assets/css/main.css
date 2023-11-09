@@ -103,6 +103,14 @@
 .main-picture {
   background: #f4f5f6;
 }
+.main-picture .main-content__inner {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+.main-with {
+  max-width: 140rem;
+  margin: 0 auto;
+}
 
 .work-field__inner {
   display: flex;
@@ -113,7 +121,7 @@
   justify-content: center;
 }
 .work-field__item {
-  width: 33.3333333333%;
+  max-width: 33.3333333333%;
   padding: 0 4rem;
   box-sizing: border-box;
 }
@@ -122,6 +130,7 @@
   font-size: 2.4rem;
   font-weight: 500;
   text-align: center;
+  line-height: 100%;
 }
 .work-field__img img {
   max-width: 100%;
@@ -142,6 +151,39 @@
 }
 .work-picture__img img {
   max-width: 100%;
+}
+.work-with__inner {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+.work-with__item {
+  width: 20%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.work-with__item img {
+  max-width: 100%;
+}
+.work-with__img {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  padding: 0 3rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .info-college {
