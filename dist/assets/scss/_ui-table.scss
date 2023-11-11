@@ -24,32 +24,16 @@
     &-name {
       width: auto;
     }
-
-    &-no {
-      width: 10%;
+    &-part{
+      width: 25rem;
     }
-    &-exam {
-      width: 11%;
-    }
-    &-stat {
-      width: 9%;
-    }
-    &-date {
-      width: 12%;
-    }
-    &-term{
-      width: 21.6rem;
-    }
-    &-recep{
-      width: 11rem;
-    }
-    &-recepCont{
-      width: 9.5rem;
+    &-etc{
+      width: 26rem;
     }
   }
   th,
   td {
-    height: 6.1rem;
+    height: 5.6rem;
   
     font: {
       size: 1.6rem;
@@ -58,7 +42,7 @@
     color:#000000;
     //word-break: keep-all;
     line-height: 2.2rem;
-    border-bottom:1px solid #dfdfdf;
+    border-bottom:1px solid #dcdcdc;
     box-sizing: border-box;
     &.color{
       &-main{
@@ -74,11 +58,12 @@
   }
   th{
     font-weight: 500;
-    background: #f5fdff;
+    background: #f3f5f7;
     padding: .6rem 2rem;
   }
   td{
     padding: .6rem 2rem;
+    
   }
   &__hor{
     position: relative;
@@ -92,13 +77,14 @@
       content:""
     }
     th, td{
-      border-right:1px solid #dfdfdf;
+      border-right:1px solid #dcdcdc;
       
     }
     th{
       &:last-child{
-        border-right-color: #f5fdff;
+        border-right-color: #f3f5f7;
       }
+      border-bottom-color: #b7b7b7;
     }
     // td{
     //   &:last-child{
@@ -374,287 +360,13 @@
     }
     
   }
-}
-
-
-.board{
-  &-view {
-    .view{
-      &-header {
-        padding: 4rem 2rem;
-        border-top: 2px solid #000000;
-        //border-bottom: 1px solid #dfdfdf;
-        background: #fbfbfb;
-      }
-      &-type{
-        //margin-bottom: 2rem;
-        font: {
-          size: 1.8rem;
-          weight:500;
-        };
-        color:#006a79;
-        text-align: center;
-        line-height: 100%;
-        &+.view-title{
-          margin-top: 2rem;
-        }
-      }
-      &-title{
-        margin: 0;
-        font: {
-          size: 2.8rem;
-          weight: 500;
-        };
-        color: #222222;
-        text-align: center;
-        line-height: 3.5rem;
-        
-      }
-      &-info {
-        display: flex;
-        justify-content: center;
-        margin-top: 3rem;
-        &__list{
-          &s {
-            display: flex;
-          }
-          padding: 0 2rem;
-          &+li{
-            position: relative;
-            &::before {
-              position: absolute;
-              top: 0rem;
-              left: 0rem;
-              width: 1px;
-              height: 1.1rem;
-              background: #dbdfe8;
-              content: "";
-            }
-          }
-        }
-        .tit {
-          padding-right: 1rem;
-          font: {
-            size: 1.6rem;
-            weight: 300;
-          };
-          color: #000000;
-        }
-        .txt {
-          font-size: 1.6rem;
-          color:#555555;
-        }
-      }
-      &-file {
-        padding: 2rem;
-        border-top: 1px solid #dfdfdf;
-        &__list{
-          @include d-flex;
-          @include align-center;
-          &+.view-file__list{
-            margin-top: .5rem;
-          }
-        }
-        &__icon {
-          display: inline-block;
-          margin-top: -.5rem;
-          width: 1.9rem;
-          height: 1.6rem;
-          margin-right: 1rem;
-          background: url(../images/icon/icon-download.png) no-repeat center;
-          background-size: 1.9rem 1.6rem;
-          //vertical-align: middle;
-        }
-        &__link {
-          font-size: 1.6rem;
-          line-height: 2.7rem;
-          color:$color-main;
-        }
-      }
-      &-content {
-        padding: 3rem 2rem;
-        font-size: 1.8rem;
-        border-top: 1px solid #dfdfdf;
-        //border-bottom: 1px solid #000000;
-        line-height: 2.9rem;
-        img {
-          max-width: 100%;
-        }
-      }
-    }
-  }
-  &-prevnext {
-    border-top: 1px solid #000000;
-    &__item{
-      @include d-flex;
-      padding: 2.5rem 2rem;
-      font-size: 1.6rem;
-      line-height: normal;
-      border-bottom: 1px solid #e4e4e4;
-    }
-    &__icon{
-      display: inline-block;
-      width: 1.2rem;
-      height: .7rem;
-      margin-top: -.5rem;
-      margin-right: 1rem;
-      vertical-align: middle;
-      background-size: 1.2rem .7rem;
-      &--prev{
-        background-image: url(../images/icon/icon-viewPrev.png);
-      }
-      &--next{
-        background-image: url(../images/icon/icon-viewNext.png);
-      }
-    }
-    &__text{
-      @include d-flex;
-      flex: 1;
-      width: calc(100% - 10rem);
-      &--text{
-        margin-right: 3rem;    
-        font-weight: 500;
-        flex: none;
-      }
-    }
-    &__title{
-      @include ellipsis(1);
-      margin-right: 2rem;
-      flex: 1;
-      color: #000000;
-      text-decoration: none;
-    }
-    &__date{
-      margin-left: auto;
-      flex: none;
-    }
-  }
-  &-answer{
-    &__inner{
-      padding-top:5rem;
-      border-top:1px solid #dfdfdf;
-      border-bottom: 1px solid #dfdfdf;
-    }
-    &__tit{
-      margin: 0;
-      padding-bottom:1.8rem;
-      font: {
-        size: 2.2rem;
-        weight:500;
-      };
-      line-height:100%;
-    }
-    &__info{
-      padding:2rem;
-      border-top: 1px solid #dfdfdf;
-      border-bottom: 1px solid #dfdfdf;
-      box-sizing: border-box;
-      background: #fbfbfb;
-      color:#000000;
-      font-size: 1.6rem;
-      line-height: 100%;
-    }
-    &__date{
-      
-      padding-left:.8rem;
-      color:#555555;
-    }
-    &__cont{
-      padding:3rem 2rem;
-      font-size: 1.8rem;
-      line-height: 3.2rem;
-    }
-  }
-  &-bottom {
-    margin-top: auto;
-    &__inner {
-      position: relative;
-      margin-top: 4rem;
-    }
-    .ui-button{
-      width: 10.6rem;
-      min-width: unset;
-      &__width{
-        &--180{
-          width: 18rem;
-        }
-      }
-    }
-    .ui-pagination{
-      padding-top: 1rem;
-    }
-    &__with {
-      &--button{
-        .board-bottom__inner{
-          margin-top: 3rem;
-        }
-        .ui-pagination{
-          padding-top: 2rem;
-        }
-        .ui-button{
-          &s{
-            position: absolute;
-            top: 0;
-            right:0;
-          }
-          height: 4.6rem;
-          line-height: 4.6rem;
-        }
-      }
-    }
-  }
-  &-list{
-    &__total{
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-      line-height: 100%;
-      &--num{
-        color:#006a79;
-        font-weight: 500
-      }
+  .text{
+    &-left{
+      text-align: left;
     }
   }
 }
 
-.ui-pagination {
-  &__inner {
-    @include d-flex-center;
-  }
-  .paging {
-    @include d-flex-center;
-    width: 4.3rem;
-    height: 4.3rem;
-    font-size: 1.5rem;
-    color: #555555;
-    border-radius: .5rem;
-    text-decoration: none;
-    &.is-active {
-      font-weight: 500;
-      color: #ffffff;
-      background: $color-main;
-    }
-    &.paging {
-      &-prev {
-        background: icon(triangle-right, '555') no-repeat center;
-        background-size: .8rem 1rem;
-        transform: rotate(180deg);
-      }
-      &-next {
-        background: icon(triangle-right, '555') no-repeat center;
-        background-size: .8rem 1rem;
-      }
-      &-first {
-        background: icon(paging-first) no-repeat center;
-        background-size: 2rem 1rem;
-      }
-      &-last {
-        background: icon(paging-first) no-repeat center top 48%;
-        background-size: 2rem 1rem;
-        transform: rotate(-180deg);
-      }
-    }
-  }
-}
 
 
 /*====================================================================================*/ 
@@ -677,204 +389,12 @@
       font-size: 1.8rem;
       line-height: normal;
     }
-    &__list{
-      thead, colgroup{
-        display: none;
+    .col{
+      &-part{
+        width: auto;
       }
-      tbody{
-        tr{
-          margin: 0;
-          padding-top: 2rem;
-          padding-bottom: 2rem;
-          padding-right: 2rem;
-          padding-left: .5rem;
-          &:hover{
-            background: transparent;
-          }
-        }
-        td{
-          padding: 0rem 1.5rem 0rem 1.5rem;  
-        }
-      }
-      tr{
-        @include d-flex;
-        //display: block;
-        position: relative;
-        flex-wrap: wrap;
-        // /margin: 0rem -1.5rem;
-        margin-left: -1.5rem;
-        padding: 1.7rem 3rem 1.5rem 3rem;
-        padding-right: 8rem;
-        border-bottom: 1px solid #dfdfdf;
-      }
-      td{
-        display: inline-block;
-        //float: left;
-        height: auto;
-        border: 0;
-        
-      }
-      .col{
-        &-num{
-          width: 7rem;
-        }
-        &-type{
-          width: 13rem;
-        }
-        &-file{
-          width: 6.5rem;
-        }
-        &-date{
-          width: 9rem;
-        }
-        &-count{
-          width: 7rem;
-        }
-      }
-      .td{
-        &-num{
-          display: none;
-        }
-        &-type{
-          flex: none;
-        }
-        &-tit{
-          display: block;
-          width: calc(100% - 6rem);
-          //flex:1;
-          flex: none;
-          padding: .6rem 1.5rem .8rem 1.5rem;
-          &__link{
-            //line-height: normal;
-            font-weight: 500;
-            &--lock{
-              background-position: right top 0.15rem;
-            }
-          }
-        }
-        &-answer{
-          position: absolute;
-          top: 50%;
-          right: 2rem;
-          padding:0;
-          transform: translateY(-50%);
-        }
-        &-author{
-          position: relative;
-          &::after{
-            position: absolute;
-            top: 0.4rem;
-            right: 0;
-            display: inline-block;
-            width: 1px;
-            height: 1.8rem;
-            background: #aaaaaa;
-            content: '';
-          }
-        }
-        &-date{
-          position: relative;
-          &::after{
-            position: absolute;
-            top: 0.4rem;
-            right: 0;
-            display: inline-block;
-            width: 1px;
-            height: 1.8rem;
-            background: #aaaaaa;
-            content: '';
-          }
-        }
-        &-file{
-          padding: 0;
-          .icon-file{
-            &__count{
-              display: none;
-            }
-            position: relative;
-            padding: 0rem 1.5rem 0rem 1.5rem;
-            &::after{
-              position: absolute;
-              top: 0.4rem;
-              right: 0;
-              display: inline-block;
-              width: 1px;
-              height: 1.8rem;
-              background: #aaaaaa;
-              content: '';
-            }
-          }
-          
-        }
-        &-recep{
-          position: absolute;
-          top: 50%;
-          right: 2rem;
-          padding: 0;
-          transform: translateY(-50%);
-        }
-        &-recepCont{
-          position: absolute;
-          top: 50%;
-          right: 7.6rem;
-          padding: 0;
-          transform: translateY(-50%);
-        }
-      }
-      .icon-file__count{
-        width: 11px;
-        height: 11px;
-        padding-top: 2px;
-      }
-      .ui-badge__answer{
-        width: 6rem;
-        height: 4rem;
-        font-size: 1.6rem;
-        line-height: 4.2rem;
-      }
-      &--notice{
-        tbody{
-          tr{
-            padding-top: 2.5rem;
-            padding-bottom: 2.5rem;
-          }
-        }
-        .td{
-          &-tit{
-            width: 100%;
-            padding-top: 0;
-          }
-        }
-      }
-      &--helper{
-        tr{
-          padding-right: 18rem;
-        }
-        .td{
-          &-tit{
-            width: 75%;
-          }
-          &-recep, &-recepCont {
-            .ui-button{
-              line-height: 3.7rem;
-            }
-          }
-        }
-      }
-      &--regular{
-        tr{
-          margin: 0;
-        }
-        .td-tit{
-          width: 100%;
-        }
-      }
-    }
-    &__scroll{
-      .ui-table {
-        th, td{
-          line-height: 2.4rem;
-        } 
+      &-etc{
+        width: auto;
       }
     }
   }

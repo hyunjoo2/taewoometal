@@ -2,10 +2,13 @@
 
 
 .sub-visual {
-  height: 22rem;
-  background: url(../images/background/bg-sub-visual.jpg) no-repeat center;
+  height: 27rem;
   background-size: cover;
-
+  @for $i from 1 to 3 {
+    &0#{$i} {
+      background-image : url(../images/background/bg-subvisual0#{$i}.png)
+    }
+  }
   &__inner {
     max-width: 140rem;
     height: 100%;
@@ -15,149 +18,29 @@
   &__text {
     @include d-flex-center;
     height: 100%;
-
     font: {
       size: 4.2rem;
       weight: 500;
-    }
-
-    ;
+    };
     color:#ffffff;
-    text-shadow: .3rem .3rem .5rem rgba($color: #000000, $alpha: .38);
-  }
-}
-.sub-core{
-  width: 0%;
-  &__item{
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-  }
-}
-.sub-content {
-  &__inner {
-    @include d-flex;
-    max-width: 140rem;
-    width: 100%;
-    margin: 0 auto;
+    text-shadow: .3rem .3rem .5rem rgba($color: #000000, $alpha: .5);
   }
 }
 
-.left-menu {
-  &__inner {
-    width: 27rem;
-    margin-top: -7rem;
-    margin-right: 6rem;
-  }
-  &__title {
-    @include d-flex-center;
-    height: 14rem;
-    background: #006a79;
-    border-radius: 1.5rem;
-    color: #ffffff;
-
-    font: {
-      size: 3.4rem;
-      weight: 500;
-    }
-
-    ;
-    line-height:100%;
-  }
-  &__list {
-    &.is-active{
-      .left-menu__link {
-        color: #006a79;
-        font-weight: 600;
-        &::before {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 2px;
-          background: #006474;
-          content: '';
-          transition: all .2s;
-        }
-      }
-    }
-    
-  }
-
-  &__link {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding: 2.5rem 3rem;
-    font: {
-      size: 1.8rem;
-      weight: 500;
-    }
-    ;
-    color:#000000;
-    line-height: 100%;
-    box-sizing: border-box;
-    //border-bottom:1px solid #dedede;
-    transition:all .2s;
-    &::before {
-      position: absolute;
-      left: 0;
-      bottom: 0;
+.sub{
+  &-content {
+    &__inner {
+      @include d-flex;
+      max-width: 140rem;
       width: 100%;
-      height: 1px;
-      background: #dedede;
-      content: '';
-      transition: all .2s;
+      margin: 0 auto;
     }
-
-    // &:hover{
-    //   color:#006a79;
-    //   font-weight: 600;
-    //   &::before{
-    //     position: absolute;
-    //     left: 0;
-    //     bottom: 0;
-    //     width: 100%;
-    //     height:2px;
-    //     background: #006474;
-    //     content: '';
-    //     transition:all .2s;
-    //   }
-    // }
   }
-}
-
-
-.sub {
   &-core {
-    padding-top: 5rem;
+    padding-top: 9rem;
+    padding-bottom: 12rem;
     flex: 1;
-    &__title {
-      font: {
-        size: 3.6rem;
-        weight: 500;
-      }
-
-      ;
-      line-height: 100%;
-
-      &--wrap {
-        @include d-flex;
-        width: 100%;
-        align-items: center;
-        margin-bottom: 4rem;
-        padding-bottom: 3rem;
-        border-bottom: 1px solid #e0e0e0;
-        box-sizing: border-box;
-      }
-    }
-    &__subtitle{
-      margin-bottom: 3rem;
-      font: {
-        size: 2.6rem;
-        weight:600;
-      };
-      line-height: normal;
-    }
+    
     &__item {
       &+& {
         margin-top: 5rem;
@@ -165,10 +48,10 @@
       &--title {
         margin-bottom: 2.5rem;
         font: {
-          size: 2.2rem;
-          weight: 600;
+          size: 2.4rem;
+          weight: 500;
         };
-        color:#006a79;
+        color:#000000;
         line-height:100%;
       }
       &--subtitle{
@@ -184,60 +67,10 @@
       }
     }
   }
-
-  &-breadcrumb {
-    margin-left: auto;
-  }
 }
 
-.breadcrumb {
-  &-list {
-    &s {
-      @include d-flex;
-      @include align-center;
-    }
 
-    &.is-active {
-      .breadcrumb-link {
-        font-weight: 500;
-        color: #000000;
-      }
-    }
 
-    &__home {
-      .breadcrumb-link {
-        display: inline-block;
-        width: 1.4rem;
-        height: 1.3rem;
-        background: url(../images/icon/icon-home.png) no-repeat center;
-        background-size: 1.4rem 1.3rem;
-      }
-    }
-
-    &+& {
-      &::before {
-        display: inline-block;
-        width: .6rem;
-        height: 1rem;
-        background: url(../images/icon/icon-breadcrumb__right.png) no-repeat center;
-        background-size: .6rem 1rem;
-        content: ""
-      }
-    }
-  }
-
-  &-link {
-    padding: 0 1.5rem;
-    color: #666666;
-
-    font: {
-      size: 1.5rem;
-      weight: 400;
-    }
-
-    ;
-  }
-}
 
 .form-des {
   display: flex;
@@ -643,86 +476,6 @@
   color:#ffffff;
   box-shadow: 2px 2px 2rem rgba(0, 0, 0, 0.3);
   font-size: 1.8rem;
-}
-
-
-
-/* 셀렉트 영역 스타일 */
-.tab-menu__select{
-  position: relative;
-  max-width: 16.3rem;
-  width: 100%;
-  margin:0;
-  margin-left: auto;
-  margin-bottom: 2rem;
-  padding:0;
-  box-sizing: border-box;
-  .ui-select{
-    font-weight: 500;
-    color:#000000;
-    transition: none;
-    &:focus{
-      outline:2px solid;
-    }
-  }
-  .tab-menu{
-    &__list{
-      &s{
-        width: 100%;
-        margin: 0;
-        
-        padding:0;
-        border-color: #767676;
-        border-radius: 0;
-        box-shadow: 0 5px 9px 1px rgba(0, 0, 0, .18);
-        &.dropdown-menu{
-          position: absolute;
-          top: 100%;
-          left: 0;
-          z-index: 1000;
-          display: none;
-          float: left;
-          transition: none;
-          &.show{
-            display: block;
-          }
-        }
-      }
-      height:auto;
-      font-weight: normal;
-      display: block;
-      white-space-collapse: collapse;
-      text-wrap: nowrap;
-      border: 0;
-      border-radius: 0;
-      &:hover{
-        background: #1e90ff;
-        .tab-menu__link{
-          color:#ffffff;
-        }
-      }
-      &.is-active{
-        background: #1e90ff;
-        .tab-menu__link{
-          color:#ffffff;
-          font-weight: 300;
-        }
-        &::before{
-          display: none;
-        }
-      }
-    }
-    &__link{
-      justify-content: flex-start;
-      padding: 0.1rem 2rem;
-      font: {
-        size: 1.6rem;
-        weight: 400;
-      };
-      color:#000000;
-      text-align: left;
-    }
-  }
 }
 
 
