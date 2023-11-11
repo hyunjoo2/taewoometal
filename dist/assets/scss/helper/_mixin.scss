@@ -282,6 +282,10 @@ $n-breakpoint: map-get($n-breakpoints, n-sm);
     clear:both;
 }
 
+@mixin hover{
+    transition: all .2s;
+}
+
 //  @for $i from 1 to 3 {
 //     .to:nth-child(#{$i}) {
 //       width : 20px * $i

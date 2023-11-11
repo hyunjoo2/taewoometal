@@ -100,6 +100,10 @@
   line-height: 100%;
   text-align: center;
 }
+.main-content.main-inq .main-content__inner {
+  padding: 6.5rem 0;
+  background: url(../images/background/bg-main__inq.png);
+}
 .main-picture {
   background: #f4f5f6;
 }
@@ -134,6 +138,11 @@
 }
 .work-field__img img {
   max-width: 100%;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+.work-field__img img:hover {
+  box-shadow: 1.5rem 1.5rem 2rem rgba(0, 0, 0, 0.3);
 }
 .work-picture__inner {
   display: flex;
@@ -151,6 +160,11 @@
 }
 .work-picture__img img {
   max-width: 100%;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+.work-picture__img img:hover {
+  box-shadow: 1.5rem 1.5rem 2rem rgba(0, 0, 0, 0.3);
 }
 .work-with__inner {
   display: flex;
@@ -182,8 +196,47 @@
   height: 10rem;
   padding: 0 3rem;
   border: 1px solid #e1e1e1;
-  border-radius: 3px;
+  border-radius: 0.5rem;
   box-sizing: border-box;
+  transition: all 0.2s;
+}
+.work-with__img:hover {
+  border-color: #1f3c4c;
+  box-shadow: 0.5rem 0.5rem 1.5rem rgba(8, 31, 44, 0.2);
+}
+.work-inq {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+.work-inq__text {
+  margin-bottom: 3.5rem;
+  font-size: 3.2rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.3);
+  line-height: 4.2rem;
+  text-align: center;
+  color: #ffffff;
+}
+.work-inq__text strong {
+  font-weight: 500;
+}
+.work-inq__button {
+  width: 15rem;
+  height: 5.6rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  border: 1px solid #ffffff;
+  border-radius: 0.5rem;
+  background: transparent;
+  transition: all 0.2s;
+}
+.work-inq__button--wrap {
+  text-align: center;
+}
+.work-inq__button:hover {
+  color: #000000;
+  background: #ffffff;
+  font-weight: 500;
 }
 
 .info-college {
@@ -902,190 +955,29 @@
 }
 @media (max-width: 720px) {
   .main-visual {
-    height: 60.5rem;
-    background-position: 28% center;
+    height: 50rem;
+    background-position: 40%;
   }
-  .user-check {
-    position: relative;
-    max-width: 100%;
-    width: 100%;
+  .main-content__title {
+    font-size: 3.9rem;
   }
-  .user-check__link {
-    height: 29.5rem;
-    padding: 3.9rem 1.8rem 5.9rem 3.6rem;
+  .work-field__inner {
+    margin: 0 -1rem;
   }
-  .user-check__inner {
-    padding-bottom: 8rem;
-    justify-content: flex-start;
+  .work-field__item {
+    padding: 0 1rem;
   }
-  .user-check__title {
-    height: 6.5rem;
-    font-size: 2.8rem;
-    line-height: 3.8rem;
+  .work-picture__inner {
+    margin: -1rem;
   }
-  .user-check__year {
-    display: inline-block;
-    padding: 0rem 2rem;
-    font-size: 1.9rem;
-    line-height: 3.6rem;
+  .work-picture__item {
+    width: 50%;
+    padding: 1rem;
   }
-  .user-check__icon {
-    margin-top: auto;
-    width: 3.3rem;
-    height: 1.7rem;
-    background: url(../images/icon/icon-arrowRight__mobile.png);
-    background-size: 3.3rem 1.7rem;
+  .work-with__item {
+    width: 50%;
   }
-  .user-check .swiper-pagination {
-    display: block;
-    bottom: 4.4rem;
-    z-index: 1;
-  }
-  .user-check .swiper-pagination-bullet {
-    width: 1.3rem;
-    height: 1.4rem;
-    background: #ffffff;
-    opacity: 0.6;
-  }
-  .user-check .swiper-pagination-bullet-active {
-    width: 4rem;
-    border-radius: 1rem;
-    opacity: 1;
-  }
-  .info-college__icon img {
-    max-width: 40%;
-    width: auto;
-  }
-  .info-notice__first {
-    align-items: center;
-  }
-  .info-notice__first--date {
-    width: 9.5rem;
-    height: 9.5rem;
-  }
-  .info-notice__first--title {
-    margin-top: 0.5rem;
-    font-size: 2.4rem;
-  }
-  .info-notice__first--content {
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-  }
-  .info-notice__first--day {
-    font-size: 3rem;
-  }
-  .info-notice__first--yearMonth {
-    font-size: 1.8rem;
-  }
-  .info-notice__list {
-    margin-top: 2rem;
-  }
-  .info-notice__link {
-    font-size: 2rem;
-    line-height: normal;
-  }
-  .info-notice__date {
-    font-size: 2rem;
-  }
-  .quick-link__link {
-    text-shadow: none;
-  }
-  .quick-link__lists {
-    width: 100%;
-  }
-  .banner-zone .swiper-controller {
-    height: 2.1rem;
-  }
-  .banner-zone .swiper-pagination {
-    font-size: 2.2rem;
-    font-weight: 300;
-  }
-  .banner-zone .swiper-pagination-current, .banner-zone .swiper-pagination-total {
-    font-size: 2.2rem;
-    font-weight: 300;
-    line-height: 100%;
-  }
-  .banner-zone .swiper-button-prev, .banner-zone .swiper-button-next {
-    width: 1rem;
-    margin-top: -1px;
-    background-size: 1rem 2.1rem;
-  }
-  .banner-zone .swiper-button-pause {
-    width: 1.1rem;
-    margin-top: -1px;
-    background-size: 1.1rem;
-  }
-  .banner-zone .swiper-button-pause.off {
-    background-size: contain;
-  }
-  .banner-slide {
-    height: auto;
-  }
-  .banner-slide__link {
-    height: 0;
-    padding-bottom: 55.28%;
-  }
-  .banner-slide__link img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .main-digital__list:nth-child(1) .main-digital__icon {
-    background-size: 7rem auto;
-  }
-  .main-digital__list:nth-child(2) .main-digital__icon {
-    background-size: 5.6rem auto;
-  }
-  .main-digital__list:nth-child(3) .main-digital__icon {
-    background-size: 10.8rem auto;
-  }
-  .main-digital__list:nth-child(4) .main-digital__icon {
-    background-size: 8.6rem auto;
-  }
-  .main-digital__list:nth-child(5) .main-digital__icon {
-    background-size: 4.5rem auto;
-  }
-  .main-digital__list:nth-child(n+3):nth-child(-n+4) {
-    padding-bottom: 7rem;
-  }
-  .main-digital__link {
-    padding-top: 3rem;
-    padding-left: 3rem;
-  }
-  .main-digital__title {
-    font-size: 2.2rem;
-    text-shadow: none;
-  }
-  .main-digital__content {
-    font-size: 1.8rem;
-    word-break: keep-all;
-    line-height: 2.4rem;
-    letter-spacing: 0;
-    text-shadow: none;
-  }
-  .main-digital__content br {
-    display: none;
-  }
-}
-@media (max-width: 425px) {
-  .user-check {
-    overflow: hidden;
-  }
-  .user-check__link {
-    padding: 3.6rem;
-    background-size: 20%;
-  }
-  .user-check__link:hover .user-check__icon {
-    transform: unset;
-  }
-  .user-check__title {
-    font-size: 2.4rem;
-  }
-  .user-check__title {
-    word-break: keep-all;
-  }
-  .user-check__title br {
-    display: none;
+  .work-inq__text {
+    font-size: 2.6rem;
   }
 }
