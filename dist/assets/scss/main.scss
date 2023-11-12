@@ -179,14 +179,18 @@
       &--wrap{
         text-align: center;
       }
+      @include d-flex-center;
       width: 15rem;
       height:5.6rem;
+      margin: 0 auto;
       color:#ffffff;
       font-size: 1.6rem;
       border: 1px solid #ffffff;
       border-radius: .5rem;
       background: transparent;
+      box-sizing: border-box;
       @include hover;
+      text-decoration: none;
       &:hover{
         color:#000000;
         background: #ffffff;

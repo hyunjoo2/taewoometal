@@ -221,14 +221,26 @@
   font-weight: 500;
 }
 .work-inq__button {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
   width: 15rem;
   height: 5.6rem;
+  margin: 0 auto;
   color: #ffffff;
   font-size: 1.6rem;
   border: 1px solid #ffffff;
   border-radius: 0.5rem;
   background: transparent;
+  box-sizing: border-box;
   transition: all 0.2s;
+  text-decoration: none;
 }
 .work-inq__button--wrap {
   text-align: center;
