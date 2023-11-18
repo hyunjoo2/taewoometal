@@ -265,8 +265,6 @@
   }
   .footer-bottom__inner {
     flex-direction: column;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .footer-logo {
     margin-bottom: 3rem;
@@ -290,6 +288,15 @@
   .footer-info {
     font-size: 2rem;
     line-height: normal;
+  }
+  .footer-address {
+    display: flex;
+    -ms-display: flexbox;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .header {
     height: 60px;

@@ -211,8 +211,6 @@
 		&-bottom{
 			&__inner{
 				flex-direction: column;
-				padding-left: 15px;
-				padding-right: 15px;
 			}
 		}
 		&-logo{
@@ -282,6 +280,11 @@
 		&-info{
 			font-size: 2rem;
 			line-height: normal;
+		}
+		&-address{
+			@include d-flex;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 	
