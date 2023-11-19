@@ -195,10 +195,13 @@
 
 @media (max-width:720px) {
   
-  .sub-core__item{
-    font-size: 1.8rem;
-    &--title{
-      font-size: 2.4rem;
+  .sub-core{
+    padding-top: 6rem;
+    &__item{
+      font-size: 1.8rem;
+      &--title{
+        font-size: 2.4rem;
+      }
     }
   }
  

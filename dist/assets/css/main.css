@@ -313,7 +313,7 @@
     margin-top: 45px;
   }
   .work-field__title {
-    font-size: 16px;
+    font-size: 18px;
   }
   .work-picture__inner {
     margin: -1rem;
@@ -327,5 +327,8 @@
   }
   .work-inq__text {
     font-size: 2.6rem;
+  }
+  .work-inq__button {
+    font-size: 1.8rem;
   }
 }
