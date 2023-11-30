@@ -132,12 +132,17 @@
   padding: 0 4rem;
   box-sizing: border-box;
 }
+.work-field__link{
+	text-decoration:none;
+}
 .work-field__title {
   margin-top: 3rem;
   font-size: 2.4rem;
   font-weight: 500;
   text-align: center;
   line-height: 100%;
+  
+  color:#000000;
 }
 .work-field__img img {
   max-width: 100%;
